@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+
+{% block conteudo %}
+
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            <div>
+                {{msg}}
+            </div>
+        {% endfor %}
+    {% endif %}
+    
+    <div class="adicionar">
+        <a href="/Doadores/add">+Adicionar</a>
+    </div>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Departamento</th>
+            <th>Editar</th>
+            <th>Remover</th>
+        </tr>
+        {% for Doadores in dados %}
+        <tr>
+            <td>{{Doadores.nome}}</td>
+            <td>{{Doadores.telefone}}</td>
+            <td><a href="edit/{{Doadores.id}}">Editar</a></td>
+            <td><a href="remove/{{Doadores.id}}">Remover</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

@@ -1,0 +1,145 @@
+/* Definindo as cores principais */
+:root {
+   --verde-claro: #a8d5ba; /* verde claro */
+   --verde-medio: #70c1b3; /* verde médio */
+   --verde-escuro: #3a7c4f; /* verde escuro */
+   --verde-lima: #64b26d;  /* verde lima */
+   --branco: #ffffff;      /* branco */
+   --cinza-claro: #f1f1f1; /* cinza claro para fundo */
+ }
+ 
+ /* Reset de margens e paddings padrão */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ /* Fundo geral da página */
+ body {
+   font-family: Arial, sans-serif;
+   background-color: var(--cinza-claro);
+   color: var(--verde-escuro);
+   line-height: 1.6;
+ }
+ 
+ /* Estilo do cabeçalho */
+ header {
+   background-color: var(--verde-escuro);
+   color: var(--branco);
+   padding: 20px 0;
+   text-align: center;
+ }
+ 
+ header h1 {
+   font-size: 2.5rem;
+   font-weight: bold;
+ }
+ 
+ /* Navegação do menu */
+ nav {
+   background-color: var(--verde-medio);
+   text-align: center;
+   padding: 10px;
+ }
+ 
+ nav a {
+   color: var(--branco);
+   text-decoration: none;
+   margin: 0 15px;
+   font-size: 1.2rem;
+ }
+ 
+ nav a:hover {
+   color: var(--verde-lima);
+ }
+ 
+ /* Estilo principal do conteúdo */
+ main {
+   padding: 40px 20px;
+   text-align: center;
+ }
+ 
+ h2 {
+   font-size: 2rem;
+   margin-bottom: 20px;
+   color: var(--verde-escuro);
+ }
+ 
+ p {
+   font-size: 1.1rem;
+   margin-bottom: 20px;
+   color: var(--verde-claro);
+ }
+ 
+ /* Botão estilizado */
+ button {
+   background-color: var(--verde-lima);
+   color: var(--branco);
+   padding: 12px 25px;
+   border: none;
+   border-radius: 30px;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+ 
+ button:hover {
+   background-color: var(--verde-medio);
+ }
+ 
+ /* Estilo do rodapé */
+ footer {
+   background-color: var(--verde-escuro);
+   color: var(--branco);
+   text-align: center;
+   padding: 15px 0;
+   position: fixed;
+   width: 100%;
+   bottom: 0;
+ }
+ 
+ footer p {
+   font-size: 1rem;
+ }
+
+table, td, th, tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 1rem;
+}
+
+fieldset {
+    border-radius: 5px;
+    background-color: rebeccapurple;
+    margin: 1rem;
+    border: 1px solid black;
+    padding: 1rem;
+    width: 20rem;
+}
+
+fieldset div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+fieldset label {
+    color: white;
+}
+
+fieldset input, select {
+    padding: 0.5rem;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+fieldset button {
+    border: 1px outset rgb(123, 255, 0);
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: rgb(123, 255, 0);
+    font-size: large;
+    font-weight: 500;
+    color: black;
+}

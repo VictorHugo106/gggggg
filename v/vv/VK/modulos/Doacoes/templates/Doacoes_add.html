@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            <div>
+                {{ msg }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <form action="/Doacoes/save" method="post">
+        <div>
+            <label for="nome">Nome: </label>
+            <select name="id_Doadores" id="nome" required>
+                <option value=""></option>
+                {% for u in Doadores %} 
+                <option value="{{u.id}}">{{u.nome}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="valor">Valor Total: </label>
+            <input type="number" name="valor" id="valor" required>
+            </select>
+        </div>
+        <div>
+            <label for="data">Data: </label>
+            <input type="date" name="data" id="data" required>
+        </div>
+        <button type="submit">Salvar</button>
+    </form>
+
+{% endblock %}
